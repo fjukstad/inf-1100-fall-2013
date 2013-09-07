@@ -1,0 +1,83 @@
+IT-tjenester for informatikkstudenter
+Kollokviegruppe 6
+20 aug 2013
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no
+
+* Nyttig info
+- [[http://orakel.uit.no][orakel.uit.no]]
+- [[http://uit.no/informatikk][uit.no/informatikk]]
+- Teknisk kompetansegruppe (TK) ved Institutt for Informatikk: 
+
+
+Maria Wulff Hauglann (leder) 
+Jon Ivar Kristiansen - Linux, brukerkontoer på labben
+Kai-Even Nilsen - Windows, Apple, programvare
+Ken-Arne Jensen - Hardware
+
+* Datalab
+
+- Kjelleren på Realfagbygget
+- 70 arbeidsplasser, 2 printere
+- Alle som tar informatikk-kurs får tilgang, studentkortet virker som nøkkelkort.
+- Dualboot - Linux (CentOS) og Windows 7
+- *Ikke* *lov* *å* *spise* *på* *labben!* *Hold* *støynivået* *nede!* 
+
+* Hvordan få brukerkonto / e-post
+
+- Alle studenter får automatisk opprettes brukerkonto, men denne må aktiveres. 
+- Dette gjøres på [[https://profil.uit.no/user/activate/]] eller hos Orakelet ved MIX-kiosken på Campus
+- Får tildelt brukernavn: _abc123_ og e-post: _abc123@uit.no_
+
+* Brukerkonto ved UiT
+
+- *e-post:* _abc123@uit.no_
+- *trådløsnett:* _eduroam_ 
+- *parkeringskort:* [[https://parkering.uit.no]] 
+- *programvare:* [[http://profil.uit.no/lireg]] og [[http://dreamspark.cs.uit.no]] (kontakt tk@cs.uit.no) 
+- *e-bøker* *og* *tidsskrifter:* [[http://uit.no/ub]]
+- *Fronter:* [[http://fronter.com/uit]]
+
+* Datalab
+
+- *brukernavn:* samme som den du aktiverte. Tre bokstaver + tre tall (_abc123_)
+- *passord:* fødselsdato (seks tall) 
+
+
+* E-post
+- Sjekkes på [[http://mail.uit.no]] eller en lokal klient. Se [[http://orakel.uit.no]] for instillinger. 
+- Også mulig å vidresende e-post til f.eks gmail 
+
+* Fronter
+- Timeplan
+- Innleveringer
+- Gruppeoppgaver
+- Forelesningstidspunkt
+- Pensum
+
+* Jentegruppe
+- To timer i uka. 
+- Onsdager kl. 16:00 på datalabben
+- Hjelpelærer: Ida
+
+* Neste uke 
+- Binære tall og operasjoner
+- Være i gang med første obligatoriske oppgave. Utlevering fredag 23. 
+
+* Kontakt
+- [[mailto:bjorn.fjukstad@uit.no][bjorn.fjukstad@uit.no]]
+- [[mailto:inf1100-staff-h13@cs.uit.no][inf1100-staff-h13@cs.uit.no]]
+
+* Spørsmål?
+
+* Informatikkhistorisk foredrag 
+- *Torsdag* *29.8* *kl.* *12:15* *-* *14:00* i Store Aud. på Realfagsbygget
+- Foredrag av *Yngvar* *Lundh* og *Rolf* *Skår*, to av pionerene innen datamaskinarkitektur.
+- Påmelding og info: [[http://uit.no/tavla/artikkel/346150/informatikkhistorisk_foredrag]]
+# _(_Etter_ _foredragene_ _vil_ _det_ _bli_ _mingling_ _og_ _enkel_ _servering.)_
+
+# _Simulator_ _for_ _Automatisk_ _Maskineri_ _(SAM)_ _i_ _drift_ _1964_ _-_ _73_
+
+
+.image siffergruppen.jpg 310 440

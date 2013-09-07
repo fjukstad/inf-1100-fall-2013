@@ -1,0 +1,90 @@
+Chapter 2: Conversions and such
+27 Aug 2013
+
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no
+
+* Binary to Decimal Conversion
+There are *3* steps for convertving a n-bit binary number to a decimal number: 
+
+- Check the first bit. If it's 0 then we can continue to evaluate its _magnitude_ (step 2). If it is 1 then number is negative, and we must find the two's complement representation and evaluate its magnitude
+- Evaluate the magnitude, simply applying the formula:  a_(n-1) * 2 ^(n-1) + a_(n-2) 2^(n-2) + ... + a_1 * 2^1 + a_0 + 2^0
+- If the first bit was 1 add a minus sign in front. 
+
+For example, convert the 8-bit *0b10000101* to decimal: 
+
+    We note that the first bit is 1, so its a negative number. 
+    
+    Find the two's complement, by adding 1 to the complement of 0b1000010 
+    0b01111010 + 0b00000001 = 0b01111011
+    Evaluating its magnitude reveals: 0*2^7 + 1*2^6 + ... + 1*2^0 = 123 
+    
+    Since the first bit was 1 we place a minus sign in front of it, and concludes that
+    0b10000101 = -123
+
+* Decimal to Binary Conversion
+There are *3* steps for converting a decimal number N to an n-bit binary number: 
+
+- Obtain the binary representation of the magnitude of N using below formula:  
+    N = a_(n-1) * 2 ^ (n-1) + a_(n-2) * 2 ^ (n-2) + ... + a_1 * 2^1 + a_0 + 2^0
+- Continuing until N = 0: If N is odd then the rightmost _a_ is 1. If N was odd, subtract 1 from N. Now remove the rightmost term and divide both sides by two.  
+- If N was positive prepend the bitstring with an additional 0. If it was negative, prepend with 0 and form the negative fo this two's complement number. 
+
+* Decimal to binary example
+Convert -123 to binary. 
+We know that to represent -123 we'll need a 8-bit binary number, n = 8, making
+the equation:
+
+    N = a_7 * 2^7 + a_6 * 2^6 + ... + a_1 * 2^1 + a_0 + 2^0
+
+Set up the equation: 
+    
+    123 = a_6 * 2^6 + ... + a_1 * 2^1 + a_0 + 2^0
+
+Since 123 is odd then *a_0* *=* *1*.
+Subtracting 1, removing the a_0 term and dividing by two we get: 
+    
+    61 = a_6 * 2^5 + ... + a_1 * 2^0
+
+61 is odd so *a_1* *=* *1*. Subtracting 1 from 61, removing the last term and dividing both sides by two: 
+
+    30 = a_6 * 2^4 +  ... + a_2 * 2^0
+
+* Decimal to binary example (contd.) 
+
+30 is even so *a_2* *=* *0*. We'll remove last term, divide both sides by two and continue... 
+
+
+    15 = a_7 * 2^3 + ... + a_3 * 2^0
+
+15 odd, so *a_3* *=* *1*. 
+
+    7 = a_7 * 2^2 + ... + a_4 * 2^0
+
+7 odd, so *a_4* *=* *1* 
+
+    3 = a_7 * 2^1 + ... + a_5 * 2^0
+
+3 is odd, *a_5* *=* *1*
+    
+    1 = a_6 * 2^0
+
+so *a_6* = *1* and we're almost done. 
+
+* Decimal to binary example (contd.)
+
+The binary representation is 0b1111011, and we can insert a sign bit making it: 
+0b01111011. Remebering that we had -123 so we need to find 0b01111011 two's complement before we can call it a day. 
+
+Remember,  (1) find the complement of 0b01111011 and (2) add 1: 
+
+    0b10000100 +
+    0b00000001 =
+    0b10000101
+
+The binary representation of -123 = 0b10000101. DONE! 
+    
+
+
+
