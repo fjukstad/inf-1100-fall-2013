@@ -2,8 +2,8 @@
 
 Slides, source code and other material for INF-1100 Fall 2013 at The University of Tromsø - The Arctic University of Norway
 
-# Lectures
-Found in lectures/ 
+# Slides
+Found in slides/ 
 
 # Tests
 Found in src/test/
