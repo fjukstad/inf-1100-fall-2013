@@ -1,9 +1,9 @@
 [submodule "src/test/macosx"]
 	path = src/test/macosx
-	url = git@github.com:Fjukstad/inf-1100-sdl-test-macosx.git
+	url = https://github.com/Fjukstad/inf-1100-sdl-test-macosx
 [submodule "src/test/linux"]
 	path = src/test/linux
 	url = git@github.com:Fjukstad/inf-1100-sdl-test-linux.git
 [submodule "src/test/windows"]
 	path = src/test/windows
-	url = git@github.com:Fjukstad/inf-1100-sdl-test-windows.git
+	url = https://github.com/Fjukstad/inf-1100-sdl-test-windows
