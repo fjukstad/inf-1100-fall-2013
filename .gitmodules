@@ -1,0 +1,3 @@
+[submodule "src/examples/macosx"]
+	path = src/examples/macosx
+	url = git@github.com:Fjukstad/inf-1100-sdl-test-macosx.git
