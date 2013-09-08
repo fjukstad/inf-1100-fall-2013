@@ -224,5 +224,67 @@ than b.
 
 
 * The switch statement (example) 
+    
+    void print_day(int day) {
+        switch(day)
+            case 1:
+                printf("It's Monday!\n"); 
+                break; 
+            case 2:
+                printf("It's Tuesday!\n"); 
+                break; 
+            
+                ....
 
+* Looping and Iteration
+
+* The for Statement
+
+It has the form: 
+
+    for(expression 1; expression 2; expression 3) {
+        statements
+    }
+
+Example: 
+
+    int days_in_a_week = 7; 
+    int day; 
+
+    for (day = 1; day <= days_in_a_week; day++){
+        print_day(day);
+    }
+
+
+* The while Statement
+
+It has the form: 
+    
+    while(expression)
+        statements
+
+Example
+    int days_in_a_week = 7; 
+    int day = 1; 
+
+    while(day <= days_in_a_week) {
+        print_day(day)
+        day++
+    }
+
+* break and continue
+
+To control the way we loop, we have _break_ and _continue_ 
+
+- A _break_ statement will exit a loop or switch
+- A _continue_ will skip current iteration of loop. 
+
+
+* Arrays and Strings
+
+* Further Data Types
+
+* Pointers
+
+* Dynamic Memory Allocation and Dynamic Structures
 
