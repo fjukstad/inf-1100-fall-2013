@@ -124,8 +124,7 @@ special formatting character _%_
 
 * Constants
 
-If you need a variable where its value is not going be changed, you can declare a
-constant. 
+If you need a variable where its value is not going be changed, you can declare a constant. 
 
 For example
 
@@ -264,6 +263,7 @@ It has the form:
         statements
 
 Example
+
     int days_in_a_week = 7; 
     int day = 1; 
 
