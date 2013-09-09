@@ -1,5 +1,5 @@
 Programming in C
-20 september 2013
+10 september 2013
 
 
 
@@ -146,7 +146,7 @@ We also have
 - ++ (increment)
 - -- (decrement)
 - % (modulus)
-- ** (power) 
+- _**_ (power) 
 
 * Comparison Operators
 
@@ -287,4 +287,7 @@ To control the way we loop, we have _break_ and _continue_
 * Pointers
 
 * Dynamic Memory Allocation and Dynamic Structures
+
+
+# http://www.cs.cf.ac.uk/Dave/C/CE.html
 
