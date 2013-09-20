@@ -1,0 +1,30 @@
+Programming Exercises
+24 september 2013
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no 
+
+* Brief summary
+
+- One *zip* file which should be named _userid-courseid-a+assignmentnumber_, e.g. _bfj001-inf1100-a2_
+- This file should have the following structure when unzipped: 
+
+    README
+    src/
+    doc/
+
+- All your source code is placed in the _src/_ folder and the report is placed in _doc/_
+- The _README_ file should contain the necessary information on how to run your code, e.g. how to compile and run it. 
+
+* Report
+
+- THE REPORT MUST BE IN PDF FORMAT
+- If a report is delivered as _odt_, _doc_, _docx_ or any other than pdf the hand-in will be automatically rejected. 
+
+# STILL MORE TO GO: 
+# * Source code
+# * How to write a report
+# * how to comment source code
+
+
+
