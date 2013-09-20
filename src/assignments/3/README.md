@@ -26,9 +26,10 @@ To open a window on the screen we use a library called Simple Directmedia Layer 
 
 If you decide to implement your algorithm, your starting point is the following set of files:
 
-drawline.h - Specifies the interface of the drawline function. Do not modify this file.
-drawline.c - An empty stub for the drawline program (complete this).
-Makefile - A Makefile for compiling the code.
+- _drawline.h_ - Specifies the interface of the drawline function. Do not modify this file.
+- _drawline.c_ - An empty stub for the drawline program (complete this).
+- _Makefile_ - A Makefile for compiling the code.
+
 We've bundled all of these files in a zip file. The zip file is located in the same folder as this document. Use this zip file as a starting point, as it also includes the necessary SDL files.
 
 ## Tools
