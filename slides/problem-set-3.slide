@@ -1,0 +1,79 @@
+INF-1100 Problem Set 3
+24 sept 2013
+
+Bjørn Fjukstad
+bjorn.fjukstad@gmail.com
+
+
+* Overview
+
+- Formulate an algorithm to draw a line on a computer screen
+- Not mandatory, do not need to hand in anything. 
+
+* Background 
+- Images on a computer screen is a collection of colored pixels
+- The screen is arranged as a two-dimensional coordinate system with (0,0) in the top left corner and (1023,767) for 1024x768 displays 
+
+.image images/screenres.png 400 500
+
+* Description
+
+Assignment is divided into four steps: 
+
+1. Draw an *horizontal* line
+2. Draw a *vertical* line
+3. Draw a line with a 45 degree slope
+4. Draw a line between two coordinates
+
+* How to draw anything on the screen
+
+- Use a graphics library called [[http://www.libsdl.org/][SDL]]
+- Don't need to know the details yet, pre-code handles all the magic
+
+* Code
+Pre-code is availible on Fronter and includes the following files: 
+
+- *drawline.h* - Specifies the interface of the drawline function. Do not modify this file. 
+- *drawnline.c* - An empty stub for the drawline program. Insert your code here. 
+- *Makefile* - Makefile for compiling code, if you are using Linux/Mac you need to modify this. 
+- _SDL.dll_ - SDL for Windows. Don't worry about this one. 
+- _include_ - More libraries for Windows. Don't worry about this one either. 
+
+
+
+* Closer look at the pre-code
+
+Lines 27-33 in _drawline.c_ 
+
+    // Draw a line on the screen from x1,y1 to x2,y2
+    void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
+    {
+        
+            // Complete this function
+
+    }
+
+- This is the function you are supposed to complete. 
+- It takes 6 arguments: The screen, start and end locations for x and y axis and which color to use
+
+* Closer look at the pre-code contd. 
+
+Lines 56-60 in the main function of _drawline.c_ shows how to call the drawline function. It should draw a red horizontal line between(10,10) and (100,10). 
+
+
+    // Example call (horizontal line). Remember to pass screen as first parameter.
+    // The SDL_MapRGB function converts a RGB value to
+    // a 32-bit value (each color is 8 bit)
+    DrawLine(screen, 10, 10, 100, 10,
+        SDL_MapRGB(screen->format, 0xff, 0, 0));
+
+
+The _SDL__MapRGB_  function is defined as 
+
+    Uint32 SDL_MapRGB(SDL_PixelFormat *fmt, Uint8 r, Uint8 g, Uint8 b);
+
+meaning that you can change the color of the line by modifying the last three arguments. 
+
+
+
+
