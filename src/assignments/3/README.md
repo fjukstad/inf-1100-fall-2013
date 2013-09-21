@@ -44,9 +44,9 @@ If you are programming on Linux/Mac, edit Makefile to build drawline with the Li
 
 ### Resources
 
-If you wish to learn more about Makefile and make, a starting point is this (http://www.opussoftware.com/tutorial/TutMakefile.htm)[tutorial].
+If you wish to learn more about Makefile and make, a starting point is this [tutorial](http://www.opussoftware.com/tutorial/TutMakefile.htm).
 
-(http://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html)[Bresenham] is one example of a fast algorithm for drawing lines ((http://en.wikipedia.org/wiki/Bresenham's_line_algorithm)[Wikipedia/Bresenham]).
+[Bresenham](http://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html) is one example of a fast algorithm for drawing lines ([Wikipedia/Bresenham](http://en.wikipedia.org/wiki/Bresenham's_line_algorithm)).
 
 ##  Deadline
 
