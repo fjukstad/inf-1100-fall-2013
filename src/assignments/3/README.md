@@ -18,7 +18,7 @@ This assignment is divided into four steps:
 
 4. Given the start and end coordinates of a line, formulate an algorithm to compute the coordinates of the pixels along the line.
 
-We encourage you to try to implement the algorithm in C code. To this end we provide you with code to open a window on the computer screen and code to set a pixel in the window. In the provided code the window is set up with 1024 pixels horizontally (the x-axis) and 768 pixels vertically (the y-axis). The point 0,0 is in the upper left corner of the window. 0, 767 is in the lower left corner, 1023,0 is in the upper right corner, and 1023,767 is in the lower right corner. Each pixel is represented as a 32 bit value encoding the color of the pixel (in RBG format, see (http://en.wikipedia.org/wiki/RGB)[RGB]).
+We encourage you to try to implement the algorithm in C code. To this end we provide you with code to open a window on the computer screen and code to set a pixel in the window. In the provided code the window is set up with 1024 pixels horizontally (the x-axis) and 768 pixels vertically (the y-axis). The point 0,0 is in the upper left corner of the window. 0, 767 is in the lower left corner, 1023,0 is in the upper right corner, and 1023,767 is in the lower right corner. Each pixel is represented as a 32 bit value encoding the color of the pixel (in RBG format, see [RGB](http://en.wikipedia.org/wiki/RGB)).
 
 To open a window on the screen we use a library called Simple Directmedia Layer (SDL). More information on SDL can be found here. Do not worry too much about SDL for this assignment. All the SDL "magic" is handled by the code provided by us.
 
