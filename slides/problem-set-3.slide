@@ -75,5 +75,42 @@ The _SDL__MapRGB_  function is defined as
 meaning that you can change the color of the line by modifying the last three arguments. 
 
 
+* Drawing horizontal and vertical lines
 
+There will only be change in x or y values, so we can go ahead and create two for-loops. 
+
+    // Draw a line on the screen from x1,y1 to x2,y2
+    void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
+    {
+        // Complete this function
+        int i, j; 
+        for(i = x1; i <= x2; i++){
+            for(j = y1; j <= y2; j++){
+                SetPixel(screen,i,j,color); 
+            }
+        }
+    }
+
+
+* Drawing a line with a slope of 45 degrees
+
+We know that x and y values will be incremented equally and can use a single for-loop. 
+
+    // Draw a line on the screen from x1,y1 to x2,y2
+    void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
+    {
+        // Complete this function
+        int i, j; 
+        j = y1; 
+
+        for(i = x1; i <= x2; i++){
+            SetPixel(screen,i,j,color); 
+            j++; 
+        }
+            
+    }
+
+
+* Bresenham's Algorithm
+.image images/bresenham.png 300 500
 
