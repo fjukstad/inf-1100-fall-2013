@@ -24,13 +24,61 @@ void SetPixel(SDL_Surface *screen, int x, int y, unsigned int color)
     SDL_UpdateRect(screen, x, y, 1, 1);
 }
 
+
+// Based loosely on http://en.wikipedia.org/wiki/Bresenham's_line_algorithm
+
 // Draw a line on the screen from x1,y1 to x2,y2
 void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
 {
-    
-        // Complete this function
+    int deltax = x2 - x1; 
+    int deltay = y2 - y1; 
 
+    // Horizontal
+    if(deltax == 0){
+        int j; 
+        for(j = y1; j <= y2; j++){
+            SetPixel(screen, x1, j,color); 
+        }
+    }
+
+    // Vertical
+    else if (deltay == 0){
+        int i; 
+        for(i = x1; i <= x2; i++){
+            SetPixel(screen, i, y1,color); 
+        }
+    }
+    // 45 degrees
+    else if (deltax == deltay){
+        int i; 
+        int j = y1; 
+        for(i = x1; i <= x2; i++){
+            SetPixel(screen,i,j,color); 
+            j++;
+        }
+    }
+
+    else{
+
+    float delta_error = (float) deltay / (float) deltax; 
+    float error = 0.0; 
+    int y = y1;
+    
+    int x; 
+
+    for(x = x1; x < x2; x++){
+        SetPixel(screen,x,y,color); 
+        error = error + delta_error; 
+        if(error >= 0.5){
+            y++;
+            error = error - 1.0; 
+        }
+    }
+    }
 }
+
+
+
 
 
 int main(int argc, char **argv)
@@ -38,6 +86,7 @@ int main(int argc, char **argv)
     int retval, done, x, y;
     SDL_Surface *screen;
     SDL_Event event;
+
 	
     // Initialize SDL	
     retval = SDL_Init(SDL_INIT_VIDEO);
@@ -46,18 +95,38 @@ int main(int argc, char **argv)
         exit(1);	
     }
 	
+    int width = 300; 
+    int height = width; 
+
     //Create a 1024x768x32 window
-    screen = SDL_SetVideoMode(1024, 768, 32, 0);     
+    screen = SDL_SetVideoMode(width, height, 32, 0);     
     if (screen == NULL) {
         printf("Unable to get video surface: %s\n", SDL_GetError());    
         exit(1);
     }
 
+
     // Example call (horizontal line). Remember to pass screen as first parameter.
     // The SDL_MapRGB function converts a RGB value to
     // a 32-bit value (each color is 8 bit)
+    //
+
+    // Horizontal
     DrawLine(screen, 10, 10, 100, 10,
         SDL_MapRGB(screen->format, 0xff, 0, 0));
+    
+    // Vertical
+    DrawLine(screen, 10, 10, 10, 100,
+        SDL_MapRGB(screen->format, 0, 0xff, 0));
+
+    // 45 Degrees
+    DrawLine(screen, 10, 10, 100, 100,
+        SDL_MapRGB(screen->format, 0, 0, 0xff));
+
+    // < 45 degrees
+    DrawLine(screen, 10, 10, 100, 60,
+        SDL_MapRGB(screen->format, 0xcc, 0xcc, 0xcc));
+
 
 
     // Wait for ctrl-c from user
