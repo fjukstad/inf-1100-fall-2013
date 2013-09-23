@@ -79,38 +79,38 @@ meaning that you can change the color of the line by modifying the last three ar
 
 There will only be change in x or y values, so we can go ahead and create two for-loops. 
 
-    // Draw a line on the screen from x1,y1 to x2,y2
-    void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
-    {
-        // Complete this function
-        int i, j; 
-        for(i = x1; i <= x2; i++){
-            for(j = y1; j <= y2; j++){
-                SetPixel(screen,i,j,color); 
-            }
+    int deltax = x2 - x1; 
+    int deltay = y2 - y1; 
+
+    // Horizontal
+    if(deltax == 0){
+        int j; 
+        for(j = y1; j <= y2; j++){
+            SetPixel(screen, x1, j,color); 
         }
     }
-
+    // Vertical
+    else if (deltay == 0){
+        int i; 
+        for(i = x1; i <= x2; i++){
+            SetPixel(screen, i, y1,color); 
+        }
+    }
 
 * Drawing a line with a slope of 45 degrees
 
 We know that x and y values will be incremented equally and can use a single for-loop. 
 
-    // Draw a line on the screen from x1,y1 to x2,y2
-    void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int color)
-    {
-        // Complete this function
-        int i, j; 
-        j = y1; 
-
+    // 45 degrees
+    else if (deltax == deltay){
+        int i; 
+        int j = y1; 
         for(i = x1; i <= x2; i++){
             SetPixel(screen,i,j,color); 
-            j++; 
+            j++;
         }
-            
     }
 
-
-* Bresenham's Algorithm
+* Bresenham's Algorithm: Lines with slope other than 45 degrees
 .image images/bresenham.png 300 500
 
