@@ -36,9 +36,11 @@ void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int 
     // Horizontal
     if(deltax == 0){
         int j; 
+
         for(j = y1; j <= y2; j++){
-            SetPixel(screen, x1, j,color); 
+            SetPixel(screen, x1, j, color); 
         }
+
     }
 
     // Vertical
@@ -48,6 +50,7 @@ void DrawLine(SDL_Surface *screen, int x1, int y1, int x2, int y2, unsigned int 
             SetPixel(screen, i, y1,color); 
         }
     }
+
     // 45 degrees
     else if (deltax == deltay){
         int i; 
@@ -109,7 +112,6 @@ int main(int argc, char **argv)
     // Example call (horizontal line). Remember to pass screen as first parameter.
     // The SDL_MapRGB function converts a RGB value to
     // a 32-bit value (each color is 8 bit)
-    //
 
     // Horizontal
     DrawLine(screen, 10, 10, 100, 10,
