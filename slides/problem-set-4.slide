@@ -1,0 +1,21 @@
+Problem set 4 - Mandatory
+30 September 2013
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no
+
+* Overview 
+
+
+You will implement code for drawing filled triangles in a window on the screen. 
+
+* Description
+Your task is to complete the functions: 
+
+- *ScaleTriangle* scale the size of the triangle. 
+- *TranslateTriangle* move the triangle to a specific position 
+- *CalculateTriangleBouningBox* calculate a triangle's bounding box
+- *FillTriangle* fill the triangle with a color
+- *DrawTriangle* draw a scaled, translated and filled triangle on the screen
+
+
