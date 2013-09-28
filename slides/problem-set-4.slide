@@ -1,4 +1,6 @@
-Problem set 4 - Mandatory
+Problem set 4 - Mandatory 
+Deadline October 18 @ 14:00
+
 30 September 2013
 
 Bjørn Fjukstad
@@ -7,15 +9,175 @@ bjorn.fjukstad@uit.no
 * Overview 
 
 
-You will implement code for drawing filled triangles in a window on the screen. 
+You will implement code for drawing filled triangles in a window on the
+screen. When you're done it will look something like this: 
+
+.image images/teapot.png 400 550
+
 
 * Description
 Your task is to complete the functions: 
 
 - *ScaleTriangle* scale the size of the triangle. 
 - *TranslateTriangle* move the triangle to a specific position 
-- *CalculateTriangleBouningBox* calculate a triangle's bounding box
+- *CalculateTriangleBoundingBox* calculate a triangle's bounding box
 - *FillTriangle* fill the triangle with a color
 - *DrawTriangle* draw a scaled, translated and filled triangle on the screen
+
+* Data structures
+
+- Each triangle is described by a _triangle_t_ data structure. 
+
+    struct triangle {
+        // Model coordinates
+        int x1, y1;
+        int x2, y2;
+        int x3, y3;
+
+        // Fill color
+        unsigned int fillcolor;
+        
+        // Scale factor
+        float scale;
+
+        ...
+    };
+
+* Data structures contd. 
+
+    struct triangle {
+
+        .... 
+
+        // Translate to these coordinates before drawing on screen
+        int tx, ty;
+        
+        // Bounding box of on-screen coordinates
+        int bx, by;         // upper left corner of box
+        int bw, bh;         // Width and height of box
+
+        // On-screen coordinates
+        int sx1, sy1;
+        int sx2, sy2;
+        int sx3, sy3;
+
+        }; 
+
+* ScaleTriangle
+- Should scale the size of the triangle. A scaling factor less than 1.0 should decrease the size of a triangle, while a factor greater than 1.0 should increase the size. 
+- Be aware that the scaling factor is a float, while coordiantes are integers
+
+
+    void ScaleTriangle(triangle_t *triangle)
+    {
+        ...
+    }
+
+
+* TranslateTriangle
+
+- Should move a triangle to a specific position on the screen. The position is specified by the _tx_ and _ty_ fields. 
+
+
+    void TranslateTriangle(triangle_t *triangle)
+    {
+        ...
+    }
+
+
+* CalculateTriangleBoundingBox
+- Should calculate size of a rectangle just large enough to contain the triangle. 
+
+
+    void CalculateTriangleBoundingBox(triangle_t *triangle)
+    {
+        ...
+    }
+
+
+* FillTriangle
+- Fill the triangle with a specified color 
+
+
+
+    void FillTriangle(SDL_Surface *screen, triangle_t *triangle)
+    {
+        ...
+    }
+
+
+* DrawTriangle
+- Should draw a scaled, translated and filled triangle on the screen. 
+
+    void DrawTriangle(SDL_Surface *screen, triangle_t *triangle)
+    {
+        ...
+    }
+
+
+
+* Where to begin
+
+- Draw a wireframe version of a triangle on a screen using the DrawLine function 
+- Scale a triangle 
+- Move a triangle to a given position on the screen
+- Fill a triangle in a pretty color
+- Draw the Teapot
+
+* Pre Code
+
+- *drawline.h* - Specifies the interface of the drawline function. Do not modify this file.
+- *drawline.c* - Implements the DrawLine function.
+- *triangle.h* - Specifies the triangle data structure and the interface to the DrawTriangle function. Do not modify this file.
+- *triangle.c* - Empty stubs for DrawTriangle and other functions. *INSERT* *YOUR* *CODE* *HERE*.
+- *teapot_data.h* - Coordinates for the classic teapot model.
+- *main.c* - Contains the main function, calls to initialize SDL, and calls to draw some example triangles. *INSERT* *YOUR* *CODE* *HERE* 
+- *Makefile* - A Makefile for compiling the code.
+- *SDL32/64.dll* and *include/* - SDL libraries for Windows
+
+* Resources 
+
+- Have a look at the resources section in the assignment text. Lots of good tutorials on filling triangles etc.
+
+* Programming Assignments 
+
+- Programming is a creative process, you must develop your own understanding of the problem and discover a path to its solution. 
+- Disussions with other students are encouraged, but you must write your own code. 
+- If you have found something on the internet that you want to use (e.g. a piece of code), contact me before using it. 
+- Copy-pasting source code without a reference is considered academic misconduct/cheating and will not be tolerated. 
+
+
+
+* Submission guidelines (Listen up!) 
+
+- One *zip* file which should be named yourname.zip, e.g. _bjornfjukstad.zip_
+- This file should have the following structure when unzipped: 
+    bjornfjukstad/
+        README
+        src/
+            sources.c
+        doc/
+            report.pdf
+
+- All your source code is placed in the _src/_ folder
+- Your report is placed in the _doc/_ folder
+
+- The _README_ file should contain the necessary information on how to compile and run your code. 
+
+* Report 
+
+- The report MUST be in *pdf* format. Any other format and the hand-in will automatically be rejected. 
+- Do not refer to the C code as self-explanatory. 
+- Use figures to illustrate data structures and pseudocode for illustrating algorithms. 
+- You must argue why your program is correct, but we don't need a formal proof. 
+
+* Source Code
+
+- Comment your code!
+- Follow an indent style (See [[http://en.wikipedia.org/wiki/Indent_style]]) 
+- If there are any bugs, write them down in the report
+- Make sure that the assignment compiles before handing it in 
+
+* One last thing: Start early, fail early
 
 
