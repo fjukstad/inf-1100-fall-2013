@@ -1,14 +1,28 @@
 
-# Uncomment the line below if you are using Mac OS X
-#SDL_LIB = `sdl-config --cflags --libs`
+SDKROOT = $(shell uname)
 
-# Uncomment the line below if you are using Linux
-#SDL_LIB = -lSDL
+# Mac
+ifeq ($(SDKROOT), Darwin)
+	SDL_LIB = `sdl-config --cflags --libs`
+	COPYCMD = 
+	SDLCMD = $(SDL_LIB)
+endif
 
-# Comment the line below if you are using Linux/Mac OS X
-SDL_LIB = SDL32.dll
-#SDL_LIB = SDL64.dll
+# Linux
+ifeq ($(SDKROOT), Linux)
+	SDL_LIB = -lSDL
+	COPYCMD = 
+	SDLCMD = $(SDL_LIB)
+endif
 
+# Windows 
+ifeq ($(SDKROOT), Cygwin)
+	# Switch the 32 and 64.dll depending on 32 or 64-bit cygwin.
+	SDL_LIB = SDL32.dll
+	#SDL_LIB = SDL64.dll
+	COPYCMD = cp $(SDL_LIB) SDL.dll
+	SDLCMD = SDL.dll
+endif
 
 SOURCE = main.c triangle.c drawline.c
 HEADER = drawline.h triangle.h teapot_data.h
@@ -16,8 +30,9 @@ HEADER = drawline.h triangle.h teapot_data.h
 all: app
 
 app: $(SOURCE) $(HEADER)
-	cp $(SDL_LIB) SDL.dll
-	gcc -Wall -o $@ -Iinclude $(SOURCE) SDL.dll
+	$(COPYCMD)
+	gcc -Wall -o $@ -Iinclude $(SOURCE) $(SDLCMD)
+
 
 clean:
 	rm -f *.o *.exe app *~
