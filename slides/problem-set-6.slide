@@ -80,5 +80,4 @@ It should at least describe the following:
 - The algorithm for bouncing balls off screen edges.
 - The algorithm for detecting when a ball has come to a rest and how you time removal of the ball from the screen.
 
-* Good Luck! 
-
+* Start early, fail early. 
