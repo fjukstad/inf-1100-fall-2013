@@ -1,0 +1,84 @@
+Problem set 6 - Mandatory 
+Deadline Friday November 15 @ 14:00
+
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no
+
+* Overview 
+
+You will implement a variant of the classic bouncing ball animation. 
+
+.image images/anim.gif
+
+* Description
+
+
+- Each ball should start at the top of the screen with a random speed in the x direction
+- Whenever a ball hits a screen boundary it should bounce back at an equal angle and loose some speed
+- When a ball has been at rest for 5 seconds it should be removed
+
+* Data structures
+
+- Each ball must be represented as an *object* data structure. 
+- This data strcutre contains _translation_, _scale_, _model_ _coordinates_ etc.
+- _translation_ is stored as a float and must be cast to an int before drawing.
+- Objects should be stored in a *linked* *list* which you must implement! 
+
+* Object Programming Interface
+
+- *CreateObject* should create a new object from an array of model coordinates and perform the neccessary memory allocation and copying
+- *DestroyObject* should remove and free an object. 
+- *DrawObject* should draw an object on the screen. 
+
+* Pre-code
+
+- All the source code you handed in last time (*traingle.c* etc.)
+- *sphere_data.h* coordinates for a sphere model
+- *list.h* the interface of the list functionality. 
+- *list.c* empty stubs for each function in the list interface. *Modify* *this* *one!* 
+- *object.h* the interface of the object functionality.
+- *object.c* empty stubs for each function in the object interface. *Modify* *this* *one!*
+- *main.c* your regular main function initializing SDL. *Place* *your* *bouncing* *ball* *code* *here* 
+- *boundingballs32.exe/bouncingballs64.exe* executable that shows what your end result might look like
+- *Makefile* for compiling the code. You'll need an alternative one (See Fronter) if you're using Linux/Mac. 
+
+* Resources
+
+- Google it! 
+
+* Programming Assignments 
+
+- Programming is a creative process, you must develop your own understanding of the problem and discover a path to its solution. 
+- Disussions with other students are encouraged, but *you* *must* *write* *your* *own* *code*. 
+- Copy-pasting source code without a reference is considered academic misconduct/cheating and will not be tolerated. 
+
+
+* Submission guidelines (Listen up!) 
+
+- One *zip* file which should be named yourname.zip, e.g. _bjornfjukstad.zip_
+- This file should have the following structure when unzipped: 
+    bjornfjukstad/
+        README
+        src/
+            sources.c
+        doc/
+            report.pdf
+
+- All your source code is placed in the _src/_ folder
+- Your report is placed in the _doc/_ folder
+
+- The _README_ file should contain the necessary information on how to compile and run your code. 
+
+* Report 
+
+It should at least describe the following:
+
+- Your implementation of the object interface.
+- Your list implementation.
+- How you have implemented animation.
+- The algorithm for bouncing balls off screen edges.
+- The algorithm for detecting when a ball has come to a rest and how you time removal of the ball from the screen.
+
+* Good Luck! 
+
