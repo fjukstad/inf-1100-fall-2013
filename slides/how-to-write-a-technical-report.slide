@@ -1,0 +1,63 @@
+How To Write a Technical Report
+29 October 2013
+
+Bjørn Fjukstad
+bjorn.fjukstad@uit.no
+
+* Technical reports
+
+- A technical report complements and describes the work that has been done
+- It's purpose is to enable the reader to gain insight and to reproduce the work
+
+
+* Structure
+
+- Intruction
+- Techical Background
+- Design
+- Implementation
+- Discussion
+- Evaluation
+- Conclusion
+- References
+
+* Introduction
+
+- Give a brief introduction to the problem.
+- State the requirements for this particular assignment
+- Motivate the reader to continue reading
+
+* Technical Background
+
+- Cover the topics needed to solve the problem, what you need to know before starting
+- E.g. a high-level description of linked-lists (how they work) could be placed here.
+
+* Design
+
+- Describe your solution
+- E.g. How does the algorithm for bouncing balls work? 
+
+* Implementation
+
+- Any low level details regarding your implementation
+- E.g. which language did you use? Which graphics library did you use for drawing spheres?
+
+* Evaluation
+
+- How did your solution perform?
+- If it is 100x faster than others, give some numbers to prove it! 
+
+* Discussion
+
+- How does your solution compare against others? 
+- Are there more ways of doing it other than the one you did? 
+
+* Conclusion
+
+- Sum up the problem and your solution. 
+
+* Other Remarks 
+
+- Remember to include references to other litterature! 
+- Make some figures! 
+- Language: Write formally, precise and be objective
