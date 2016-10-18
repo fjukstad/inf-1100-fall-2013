@@ -1,0 +1,10 @@
+# Slides and presentations  
+- [IT-tjenester for informatikkstudenter](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/1.slide) 
+- [Problem set 1 (mandatory)](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/2.slide)
+- [Chapter 2: Conversions and such](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/2.5.slide)
+- [Programming in C](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/3.slide)
+- [Programming Exercises](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/programming-exercises.slide)
+- [How To Write a Technical Report](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/how-to-write-a-technical-report.slide)
+- [Problem Set 3](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/problem-set-3.slide)
+- [Problem set 4 (mandatory)](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/problem-set-4.slide)
+- [Problem set 6 (mandatory)](http://talks.godoc.org/github.com/fjukstad/inf-1100-fall-2013/slides/problem-set-6.slide)
